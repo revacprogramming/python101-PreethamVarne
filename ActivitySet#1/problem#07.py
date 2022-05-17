@@ -1,22 +1,27 @@
 # String
-largest = 0
-smallest=50
+largest = None
+smallest= None
 while True:
       try:
             num = input("Enter a number: ")
-            if num == 'done':
-                break
             n = int(num)
-            if(n<smallest):
-                 smallest=n
-            if(n>largest):
-                 largest=n
+            
       except:
-             print("Invalid input")
-        
-   
+        if num == 'done':
+                break
+        else:
+          print("Invalid input")
       
-           
+      if largest is None:
+        largest=n
+          
+      elif(n>largest):
+        largest=n
+      if smallest is None:
+        smallest=n
+        
+      elif(n<smallest):
+        smallest=n
 
 print("Maximum is", largest)
 print("Minimum is", smallest)
