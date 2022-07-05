@@ -1,3 +1,4 @@
+#tuples
 name = raw_input("Enter file:")
 if len(name) < 1 : name = "File1.py"
 handle = open(name)
