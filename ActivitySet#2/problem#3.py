@@ -1,11 +1,19 @@
 
 
-def   get_cs():
-    """get string input"""
+def get_cs():
+  name =input("enter the string : ");
+  return name;
 
 
 def cs_to_lot(cs):
-    """convert connected string to list of strings"""
+    split=  cs.split(';')
+    list = [];
+    for x in split:
+      if(x not in list):
+           wrd=x.split('=')
+           t=tuple(wrd)
+           list.append(t);
+    return list;
 
 
 def main():
@@ -16,4 +24,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    main() 
